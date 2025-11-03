@@ -19,10 +19,12 @@ public class DemoHTMLAttribute {
         //driver.findElement(By.id("password")).sendKeys("123456");
         WebElement inputPass = driver.findElement(By.id("password"));
         inputPass.sendKeys("123456");
-        driver.findElement(By.tagName("button")).click();
+        //driver.findElement(By.tagName("button")).click();
         //driver.findElement(By.linkText("Forgot Password?")).click();
         //driver.findElement(By.partialLinkText("Password?")).click();//một phần của chuỗi
         //driver.findElement(By.className("btn-primary")).click();
+        //driver.findElement(By.className("btn btn-primary btn-block")).click();
+        driver.findElement(By.xpath("//button[@class='btn btn-primary btn-block']")).click();
         Thread.sleep(2000);//khoảng thời gian nghỉ
         driver.quit();
     }
