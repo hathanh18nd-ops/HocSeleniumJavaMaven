@@ -20,11 +20,13 @@ public class HandleListElement {
         driver.findElement(By.xpath(BTLocatorCRMLeads.inputPassword)).sendKeys("123456");
         driver.findElement(By.xpath(BTLocatorCRMLeads.buttonLogin)).click();
         //get all element menu
-        List<WebElement> Listmenu = driver.findElements(By.xpath("//ul[@id='side-menu']/li[contains(@class,'menu-item')]"));
-        System.out.println("Số lượng menu: " + Listmenu.size());
-        for (int i = 0; i < Listmenu.size(); i++) {
-            System.out.println("Menu thứ " + (i + 1) + ": " + Listmenu.get(i).getText());
+        List<WebElement> listmenu = driver.findElements(By.xpath("//ul[@id='side-menu']/li[contains(@class,'menu-item')]"));
+        System.out.println("Số lượng menu: " + listmenu.size());
+        for (int i = 0; i < listmenu.size(); i++) {
+            System.out.println("Menu thứ " + (i + 1) + ": " + listmenu.get(i).getText());
         }
+        System.out.println(listmenu.get(0).getText().equals("Dashboard"));
+        System.out.println(listmenu.get(1).getText().equals("Customers"));
         Thread.sleep(2000);
         driver.quit();
     }
