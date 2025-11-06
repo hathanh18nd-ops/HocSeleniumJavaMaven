@@ -30,8 +30,9 @@ public class HandleNewWindow {
 //        System.out.println(listmenu.get(0).getText().equals("Dashboard"));
 //        System.out.println(listmenu.get(1).getText().equals("Customers"));
         driver.switchTo().newWindow(WindowType.TAB);
+        driver.navigate().to("https://google.com");
         driver.switchTo().newWindow(WindowType.WINDOW);
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
         driver.navigate().to("https://www.google.com/");
         Thread.sleep(1000);
         driver.quit();

@@ -18,7 +18,9 @@ public class HandleListElement {
         driver.get("https://crm.anhtester.com/admin/authentication");
         driver.findElement(By.xpath(BTLocatorCRMLeads.inputEmail)).sendKeys("admin@example.com");
         driver.findElement(By.xpath(BTLocatorCRMLeads.inputPassword)).sendKeys("123456");
+        System.out.println("Trước login "+driver.getCurrentUrl());
         driver.findElement(By.xpath(BTLocatorCRMLeads.buttonLogin)).click();
+        System.out.println("Sau login "+driver.getCurrentUrl());
         //get all element menu
         List<WebElement> listmenu = driver.findElements(By.xpath("//ul[@id='side-menu']/li[contains(@class,'menu-item')]"));
         System.out.println("Số lượng menu: " + listmenu.size());
