@@ -14,6 +14,7 @@ public class LocatorCRM {
     public static String alerErrorEmailRequired = "//div[normalize-space()='The Email Address field is required.']";
     public static String alerErrorPasswordRequired = "//div[normalize-space()='The Password field is required.']";
     //locator for Menu
+    public static String listMenu = "//ul[@id='side-menu']/li[contains(@class,'menu-item')]";
     public static String menuDashboard = "//span[@class='menu-text' and normalize-space()='Dashboard']";
     public static String menuCustomers = "//span[@class='menu-text' and normalize-space()='Customers']";
     public static String menuSales = "//span[@class='menu-text' and normalize-space()='Sales']";
@@ -28,6 +29,9 @@ public class LocatorCRM {
     public static String menuKnowledgeBase = "//span[@class='menu-text' and normalize-space()='Knowledge Base']";
     public static String menuUtilities = "//span[@class='menu-text' and normalize-space()='Utilities']";
     public static String menuReports = "//span[@class='menu-text' and normalize-space()='Reports']";
+    //locator for Dashboard Page
+    public static String dashboardOptions = "//div[normalize-space()='Dashboard Options']";
+    public static String listCheckbox = "//div[@id='dashboard-options']//input[@type='checkbox']";
     //locator for Customers Page
     public static String buttonNewCustomer = "//a[normalize-space()='New Customer']";
     public static String buttonImportCustomer = "//a[normalize-space()='Import Customers']";
