@@ -50,6 +50,17 @@ public class LocatorCRM {
     public static String labelInactiveContactsNumber = "//div[@id='wrapper']/descendant::span[normalize-space()='Inactive Contacts']/preceding-sibling::span";
     public static String labelContactsLoggedInToday = "//div[@id='wrapper']/descendant::span[@data-title='Contacts Logged In Today']";
     public static String labelContactsLoggedInTodayNumber = "//div[@id='wrapper']/descendant::span[@data-title='Contacts Logged In Today']/preceding-sibling::span";
+    //body table customers
+    public static String rowBody = "//table[@id='clients']//tr[1]";
+    public static String valueRowColume = "//table[@id='clients']//tr[1]//td[3]";
+    public static String iconView = "//table[@id='clients']//tr[1]//td[3]//a[normalize-space()='View']";//dùng hàm để áp dụng cho các bản ghi khác
+    public static String iconEdit = "//table[@id='clients']//tr[1]//td[3]//a[normalize-space()='Edit']";
+    public static String iconDelete = "//table[@id='clients']//tr[1]//td[3]//a[normalize-space()='Delete']";
+    public static String labelRecordCount = "//div[@id='leads_info']";
+    public static String buttonPrevious = "//li[@id='leads_previous']//a[normalize-space()='Previous']";
+    public static String buttonNumber = "//li[@id='leads_previous']/following-sibling::li/a";
+    public static String buttonNext = "//li[@id='leads_next']//a[text()='Next']";
+
     //locator for New Customers Page
     public static String inputCompany = "//input[@id='company']";
     public static String inputVAT = "//input[@id='vat']";
@@ -57,15 +68,28 @@ public class LocatorCRM {
     public static String inputWebsite = "//input[@id='website']";
     public static String dropdownGroups = "//button[@data-id='groups_in[]']";
     public static String inputSearchGroups = "//button[@data-id='groups_in[]']/following-sibling::div//input[@type='search']";
+    public static String clickValueGroups = "//button[@data-id='groups_in[]']/following-sibling::div//span[text()='GroupVIP']/parent::a";
     public static String dropdownCurrency = "//button[@data-id='default_currency']";
     public static String inputSearchCurrency = "//button[@data-id='default_currency']/following-sibling::div//input[@type='search']";
+    public static String clickValueCurrency = "//button[@data-id='default_currency']/following-sibling::div//span[text()='USD']/parent::a";
     public static String dropdownDefaultLanguage = "//button[@data-id='default_language']";
+    public static String clickValueDefaultLanguage = "//span[normalize-space()='Vietnamese']";// fix cung gia tri
+//    public static String clickValueDefaultLanguage = "//button[@data-id='default_language']/following-sibling::div//span[normalize-space()='English']/parent::a";
+    // tao ham dong cho locator tren de su dung cho cac gia tri khac
+    public static String selectValueLanguage(String language) {
+        String xpathLanguage = "//span[normalize-space()='" + language + "']";
+        return xpathLanguage;
+    }
+    // su dung kieu Sting format
+    public static String clickValueDefaultLanguageDynamic = "//span[normalize-space()='%s']";//%s truyen chuoi, %d truyen so
+
     public static String inputAddress = "//textarea[@id='address']";
     public static String inputCity = "//input[@id='city']";
     public static String inputState = "//input[@id='state']";
     public static String inputZipCode = "//input[@id='zip']";
     public static String dropdownCountry = "//button[@data-id='country']";
     public static String inputSearchCountry = "//button[@data-id='country']/following-sibling::div//input[@type='search']";
+    public static String clickValueCountry = "//button[@data-id='country']/following-sibling::div//span[normalize-space()='Vietnam']/parent::a";
     public static String buttonSaveAndCreateContact = "//div[@id='profile-save-section']/button[normalize-space()='Save and create contact']";
     public static String buttonSave = "//div[@id='profile-save-section']/button[normalize-space()='Save']";// '/'==descendant::
 }
